@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MsQ-vn-hKq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact Us View Controller-->
+        <scene sceneID="rup-NJ-5UB">
+            <objects>
+                <viewController id="do6-Ks-xaJ" customClass="ContactUsViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C46-uH-Rg9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9f6-hU-rhL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" selectedImage="icon-about-phone" systemItem="contacts" id="98i-4Q-CBB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dd-VE-V9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="11"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="4cz-mh-LkC">
+            <objects>
+                <tableViewController id="Vzf-Nv-BZE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fpY-mY-zAs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rZZ-c0-GKm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rZZ-c0-GKm" id="AwL-m4-Ov8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cjg-HK-rpc" kind="show" id="YK3-Yc-qsZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vzf-Nv-BZE" id="4wJ-cm-E4o"/>
+                            <outlet property="delegate" destination="Vzf-Nv-BZE" id="adc-kk-mKD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="jNL-tH-Nt0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bw-U2-X3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="-710"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pll-mR-vcc">
+            <objects>
+                <viewController id="cjg-HK-rpc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Aw-Nf-70p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3VU-Rz-IUn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z8S-za-c8s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIl-6P-xEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="-711"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="Ybf-iu-4Pa">
+            <objects>
+                <navigationController id="bIO-MY-1Kz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Products" id="fur-bf-Zwi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JsH-rZ-yoN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vzf-Nv-BZE" kind="relationship" relationship="rootViewController" id="Zzf-pk-1Jq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6l-Jl-Wfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-710"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MOc-El-oCt">
+            <objects>
+                <tabBarController id="MsQ-vn-hKq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f8H-b2-tjO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bIO-MY-1Kz" kind="relationship" relationship="viewControllers" id="vdn-VD-g1O"/>
+                        <segue destination="do6-Ks-xaJ" kind="relationship" relationship="viewControllers" id="9Zs-CP-g0e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfV-og-xTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1288" y="-314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-about-phone" width="34.5" height="34.5"/>
+    </resources>
+</document>
