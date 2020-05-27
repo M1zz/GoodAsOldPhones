@@ -12,6 +12,7 @@ class ProductsTableViewController: UITableViewController {
 
     struct Cells {
         static let identifier = "productCell"
+        static let segueIdentifier = "showProduct"
     }
     
     private var products: [Product]?
@@ -27,6 +28,17 @@ class ProductsTableViewController: UITableViewController {
         Product(name: "1921 Dial Phone", cellImageName: "image-cell2", fullscreenImageName: "phone-fullscreen2"),
         Product(name: "1937 Desk Set", cellImageName: "image-cell3", fullscreenImageName: "phone-fullscreen3"),
         Product(name: "1984 Moto Portable", cellImageName: "image-cell4", fullscreenImageName: "phone-fullscreen4")]
+    }
+    
+    // MARK: - View Transfer
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Cells.segueIdentifier {
+        if let cell = sender as? UITableViewCell,
+          let indexPath = tableView.indexPath(for: cell),
+          let productVC = segue.destination as? ProductViewController {
+          productVC.product = products?[indexPath.row]
+        }
+      }
     }
 }
 

@@ -40,7 +40,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cjg-HK-rpc" kind="show" id="YK3-Yc-qsZ"/>
+                                    <segue destination="cjg-HK-rpc" kind="push" identifier="showProduct" id="YK3-Yc-qsZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="528" y="-710"/>
         </scene>
-        <!--View Controller-->
+        <!--Product View Controller-->
         <scene sceneID="Pll-mR-vcc">
             <objects>
-                <viewController id="cjg-HK-rpc" sceneMemberID="viewController">
+                <viewController id="cjg-HK-rpc" customClass="ProductViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Aw-Nf-70p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
