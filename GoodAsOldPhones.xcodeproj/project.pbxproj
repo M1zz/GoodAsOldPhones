@@ -14,6 +14,8 @@
 		A5C02F322477B2FB00C7AC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C02F312477B2FB00C7AC1D /* Assets.xcassets */; };
 		A5C02F352477B2FB00C7AC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C02F332477B2FB00C7AC1D /* LaunchScreen.storyboard */; };
 		A5C02F402477B2FC00C7AC1D /* GoodAsOldPhonesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C02F3F2477B2FC00C7AC1D /* GoodAsOldPhonesTests.swift */; };
+		A5CC2FE9247CDB3100DA8708 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC2FE8247CDB3100DA8708 /* Product.swift */; };
+		A5CC2FEB247E968B00DA8708 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC2FEA247E968B00DA8708 /* ProductViewController.swift */; };
 		A5DB1FC02477FEAD006E41DA /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB1FBF2477FEAD006E41DA /* ContactUsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		A5C02F3B2477B2FC00C7AC1D /* GoodAsOldPhonesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodAsOldPhonesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C02F3F2477B2FC00C7AC1D /* GoodAsOldPhonesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodAsOldPhonesTests.swift; sourceTree = "<group>"; };
 		A5C02F412477B2FC00C7AC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CC2FE8247CDB3100DA8708 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		A5CC2FEA247E968B00DA8708 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		A5DB1FBF2477FEAD006E41DA /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,12 +87,14 @@
 			children = (
 				A5C02F282477B2F900C7AC1D /* AppDelegate.swift */,
 				A5C02F2A2477B2F900C7AC1D /* SceneDelegate.swift */,
-				A5C02F2E2477B2F900C7AC1D /* Main.storyboard */,
-				A581EAA0247CB7BD006DE731 /* ProductsTableViewController.swift */,
-				A5C02F312477B2FB00C7AC1D /* Assets.xcassets */,
 				A5C02F332477B2FB00C7AC1D /* LaunchScreen.storyboard */,
-				A5C02F362477B2FB00C7AC1D /* Info.plist */,
+				A5CC2FE8247CDB3100DA8708 /* Product.swift */,
+				A581EAA0247CB7BD006DE731 /* ProductsTableViewController.swift */,
+				A5CC2FEA247E968B00DA8708 /* ProductViewController.swift */,
 				A5DB1FBF2477FEAD006E41DA /* ContactUsViewController.swift */,
+				A5C02F2E2477B2F900C7AC1D /* Main.storyboard */,
+				A5C02F362477B2FB00C7AC1D /* Info.plist */,
+				A5C02F312477B2FB00C7AC1D /* Assets.xcassets */,
 			);
 			path = GoodAsOldPhones;
 			sourceTree = "<group>";
@@ -203,8 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CC2FEB247E968B00DA8708 /* ProductViewController.swift in Sources */,
 				A5C02F292477B2F900C7AC1D /* AppDelegate.swift in Sources */,
 				A581EAA1247CB7BD006DE731 /* ProductsTableViewController.swift in Sources */,
+				A5CC2FE9247CDB3100DA8708 /* Product.swift in Sources */,
 				A5C02F2B2477B2F900C7AC1D /* SceneDelegate.swift in Sources */,
 				A5DB1FC02477FEAD006E41DA /* ContactUsViewController.swift in Sources */,
 			);

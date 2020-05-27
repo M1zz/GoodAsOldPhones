@@ -10,18 +10,18 @@ import UIKit
 
 class ContactUsViewController: UIViewController {
     
-    var aboutUsHeaderImageView = UIImageView()
-    var aboutUsTitleLabel = UILabel()
-    var aboutUsDescriptionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
-    var contactTitleLabel = UILabel()
-    var contactEmailImageView = UIImageView()
-    var contactEmailLabel = UILabel()
-    var contactPhoneImageView = UIImageView()
-    var contactPhoneLabel = UILabel()
-    var contactWebImageView = UIImageView()
-    var contactWebLabel = UILabel()
-    var scrollView = UIScrollView()
-    var contentView = UIView()
+    let aboutUsHeaderImageView = UIImageView()
+    let aboutUsTitleLabel = UILabel()
+    let aboutUsDescriptionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
+    let contactTitleLabel = UILabel()
+    let contactEmailImageView = UIImageView()
+    let contactEmailLabel = UILabel()
+    let contactPhoneImageView = UIImageView()
+    let contactPhoneLabel = UILabel()
+    let contactWebImageView = UIImageView()
+    let contactWebLabel = UILabel()
+    let scrollView = UIScrollView()
+    let contentView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +31,27 @@ class ContactUsViewController: UIViewController {
     }
     
     func setupScrollView() {
-        scrollView.translatesAutoresizingMaskIntoConstraints  = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        
-        configureScrollView()
         
         setScrollViewConstraints()
         setContentViewConstraints()
     }
     
     func setupContents() {
-        contentView.addSubview(aboutUsHeaderImageView)
-        contentView.addSubview(aboutUsTitleLabel)
-        contentView.addSubview(aboutUsDescriptionLabel)
-        contentView.addSubview(contactTitleLabel)
-        contentView.addSubview(contactEmailImageView)
-        contentView.addSubview(contactEmailLabel)
-        contentView.addSubview(contactPhoneImageView)
-        contentView.addSubview(contactPhoneLabel)
-        contentView.addSubview(contactWebImageView)
-        contentView.addSubview(contactWebLabel)
+        scrollView.addSubview(aboutUsHeaderImageView)
+        scrollView.addSubview(aboutUsTitleLabel)
+        scrollView.addSubview(aboutUsDescriptionLabel)
+        scrollView.addSubview(contactTitleLabel)
+        scrollView.addSubview(contactEmailImageView)
+        scrollView.addSubview(contactEmailLabel)
+        scrollView.addSubview(contactPhoneImageView)
+        scrollView.addSubview(contactPhoneLabel)
+        scrollView.addSubview(contactWebImageView)
+        scrollView.addSubview(contactWebLabel)
         
         configureAboutUsHeaderImageView()
         configureAboutUsTitleLabel()
@@ -78,20 +76,15 @@ class ContactUsViewController: UIViewController {
         setAboutUsContactWebLabelConstraints()
     }
     
-    func configureScrollView() {
-        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-    }
-
     func configureAboutUsHeaderImageView() {
-        
         let headerImage: UIImage = UIImage(named: "header-contact")!
         aboutUsHeaderImageView.image = headerImage
+        aboutUsHeaderImageView.sizeToFit()
     }
     
     func configureAboutUsTitleLabel() {
         aboutUsTitleLabel.text = "About Us"
         aboutUsTitleLabel.font = UIFont.boldSystemFont(ofSize: 28)
-        
     }
     
     func configureAboutUsDescriptionLabel() {
@@ -149,27 +142,26 @@ class ContactUsViewController: UIViewController {
     
     func setAboutUsHeaderImageViewConstraints() {
         aboutUsHeaderImageView.translatesAutoresizingMaskIntoConstraints = false
-        aboutUsHeaderImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        aboutUsHeaderImageView.topAnchor.constraint(equalTo:  view.safeAreaLayoutGuide.topAnchor).isActive = true
-        aboutUsHeaderImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        aboutUsHeaderImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        aboutUsHeaderImageView.topAnchor.constraint(equalTo:  contentView.safeAreaLayoutGuide.topAnchor).isActive = true
+        aboutUsHeaderImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
     }
     
     func setAboutUsTitleLabelConstraints() {
         aboutUsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        aboutUsTitleLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor)
-            .isActive = true
-        aboutUsTitleLabel.topAnchor.constraint(equalTo:  aboutUsHeaderImageView.bottomAnchor,constant: 50).isActive = true
+        aboutUsTitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        aboutUsTitleLabel.topAnchor.constraint(equalTo: aboutUsHeaderImageView.bottomAnchor,constant: 50).isActive = true
     }
     
     func setAboutUsDescriptionLabelConstraints(){
         aboutUsDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        aboutUsDescriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        aboutUsDescriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         aboutUsDescriptionLabel.topAnchor.constraint(equalTo:  aboutUsTitleLabel.bottomAnchor,constant: 50).isActive = true
     }
     
     func setAboutUsContactTitleLabelConstraints() {
         contactTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        contactTitleLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor)
+        contactTitleLabel.centerXAnchor.constraint(equalTo:contentView.centerXAnchor)
             .isActive = true
         contactTitleLabel.topAnchor.constraint(equalTo:  aboutUsDescriptionLabel.bottomAnchor,constant: 50).isActive = true
     }
@@ -211,6 +203,7 @@ class ContactUsViewController: UIViewController {
         contactWebLabel.topAnchor.constraint(equalTo:  contactPhoneImageView.bottomAnchor,constant: 20).isActive = true
         contactWebLabel.centerYAnchor.constraint(equalTo: contactWebImageView.centerYAnchor).isActive = true
         contactWebLabel.leadingAnchor.constraint(equalTo: contactWebImageView.trailingAnchor, constant: 20).isActive = true
+        contactWebLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40).isActive = true
     }
     
 }
