@@ -85,14 +85,9 @@
 		A5C02F272477B2F900C7AC1D /* GoodAsOldPhones */ = {
 			isa = PBXGroup;
 			children = (
-				A5C02F282477B2F900C7AC1D /* AppDelegate.swift */,
-				A5C02F2A2477B2F900C7AC1D /* SceneDelegate.swift */,
-				A5C02F332477B2FB00C7AC1D /* LaunchScreen.storyboard */,
-				A5CC2FE8247CDB3100DA8708 /* Product.swift */,
-				A581EAA0247CB7BD006DE731 /* ProductsTableViewController.swift */,
-				A5CC2FEA247E968B00DA8708 /* ProductViewController.swift */,
-				A5DB1FBF2477FEAD006E41DA /* ContactUsViewController.swift */,
-				A5C02F2E2477B2F900C7AC1D /* Main.storyboard */,
+				A5DD2B4B25EFD4B90078F916 /* Supports */,
+				A5DD2B4A25EFD4AE0078F916 /* Models */,
+				A5DD2B4925EFD4860078F916 /* Screens */,
 				A5C02F362477B2FB00C7AC1D /* Info.plist */,
 				A5C02F312477B2FB00C7AC1D /* Assets.xcassets */,
 			);
@@ -106,6 +101,35 @@
 				A5C02F412477B2FC00C7AC1D /* Info.plist */,
 			);
 			path = GoodAsOldPhonesTests;
+			sourceTree = "<group>";
+		};
+		A5DD2B4925EFD4860078F916 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A5C02F2E2477B2F900C7AC1D /* Main.storyboard */,
+				A581EAA0247CB7BD006DE731 /* ProductsTableViewController.swift */,
+				A5CC2FEA247E968B00DA8708 /* ProductViewController.swift */,
+				A5DB1FBF2477FEAD006E41DA /* ContactUsViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A5DD2B4A25EFD4AE0078F916 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5CC2FE8247CDB3100DA8708 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5DD2B4B25EFD4B90078F916 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A5C02F282477B2F900C7AC1D /* AppDelegate.swift */,
+				A5C02F2A2477B2F900C7AC1D /* SceneDelegate.swift */,
+				A5C02F332477B2FB00C7AC1D /* LaunchScreen.storyboard */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
